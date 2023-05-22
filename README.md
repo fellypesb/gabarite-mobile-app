@@ -8,17 +8,17 @@ gabarito com o cartão resposta dos alunos.
 - react-native 0.71.8
 
 para executar projeto no navegador:
-```js
+```sh
 npm install react-native-web@~0.18.10 react-dom@18.2.0 @expo/webpack-config@^18.0.1
 ```
 
 para executar navegação de telas:
-```js
+```sh
 npm install @react-navigation/native
 ```
-```js
+```sh
 npm install react-native-screens react-native-safe-area-context@4.5.0
 ```
-```js
+```sh
 npm install @react-navigation/native-stack
 ```
