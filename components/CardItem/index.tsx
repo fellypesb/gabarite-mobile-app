@@ -6,12 +6,13 @@ import {
     Text,
     Image,
     TouchableOpacity,
-    Pressable 
 } from 'react-native'
 
 
 const CardItem = (props:any) => {
   const onPress = props.onPress;
+  const content = props.content;
+  const icon = props.icon;
   const backGroundColor = onPress === "selected" ? "#00B2A8" : "#EBEBEB";
 
   return (
@@ -19,11 +20,11 @@ const CardItem = (props:any) => {
       style={[styles.containerCards, {backgroundColor: backGroundColor}]}
     >
       <Text style={styles.cardText}>
-          Listar correções já realizadas
+        {content}
       </Text>
 
       <Image 
-          source={require('../../assets/iconHome1.png')}
+          source={require(`../../assets/${icon}.png`)}
           style={styles.cardImage}
       />
     </TouchableOpacity>

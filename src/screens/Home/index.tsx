@@ -5,11 +5,9 @@ import { StyledButton } from '../../../components/StyledButton';
 import {
     Text,
     View,
-    TouchableOpacity,
-    Image
 } from 'react-native';
 
-export function Home(){
+export function Home({ navigation }){
     return (
         <View style={styles.container}>
             <Text style={styles.title}>
@@ -17,14 +15,31 @@ export function Home(){
             </Text>
 
             <View style={styles.containerCards}>
-                <CardItem  />
-                <CardItem onPress="selected"/>
+                <CardItem  
+                    content="Listar correções já realizadas"
+                    icon="iconHome1"
+                />
+                <CardItem
+                    content="Iniciar nova correção de atividades" 
+                    onPress="selected"
+                    icon="iconHome2"
+                />
                 
             </View>
 
             <View style={styles.containerButton}>
-                <StyledButton type='primary' content='avançar'/>
-                <StyledButton type='secundary' content='voltar'/>
+                <StyledButton 
+                    type='primary'
+                    content='avançar'
+                    width='123'
+                    onPress={() => navigation.navigate('Newfix')}
+                />
+                <StyledButton 
+                    type='secundary' 
+                    content='voltar'
+                    width='123'
+                    onPress={() => navigation.navigate('Login')}
+                />
             </View>
 
             <View style={styles.footer}>

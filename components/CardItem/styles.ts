@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     cardText: {
         width: 280,
         fontSize: 23,
-        fontWeight: '600'
+        fontWeight: '600',
     },
 
     cardImage: {

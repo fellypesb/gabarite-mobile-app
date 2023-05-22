@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 
-export function Signup() {
+export function Signup({ navigation }) {
     return (
         <View style={styles.container}>
           <Text style={styles.title}>
@@ -32,21 +32,29 @@ export function Signup() {
             />
 
             <TextInput style={styles.input}
+              secureTextEntry={true}
               placeholder='Senha'
             />
 
             <TextInput style={styles.input}
+              secureTextEntry={true}
               placeholder='Confirmar senha'
             />
 
             <View style={styles.containerButton}>
-              <TouchableOpacity style={styles.buttonSave}>
+              <TouchableOpacity 
+                style={styles.buttonSave}
+                onPress={() => navigation.navigate('Login')}
+              >
                 <Text style={styles.buttonTextSave}>
                   SALVAR
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.buttonBack}>
+              <TouchableOpacity 
+                style={styles.buttonBack}
+                onPress={() => navigation.navigate('Login')}
+              >
                 <Text style={styles.buttonTextBack}>
                   VOLTAR
                 </Text>

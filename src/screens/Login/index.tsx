@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 
-export function Login() {
+export function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <ImageBackground 
@@ -21,7 +21,7 @@ export function Login() {
       >
       <View style={styles.containerText}>
         <Text style={styles.title}>GABARITE</Text>
-        <Text style={styles.subTitle}>Otimizando suas correções</Text>
+        <Text style={styles.subTitle}>Otimizando suas <Text style={styles.subTitleSpan}>correções</Text></Text>
       </View>
       <View style={styles.containerLogo}>
         <Image 
@@ -35,11 +35,13 @@ export function Login() {
         />
 
         <TextInput style={styles.input}
-          
           secureTextEntry={true}
           placeholder='Senha'
         />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity 
+          style={styles.button}
+          onPress={() => navigation.navigate('Home')}
+        >
           <Text style={styles.buttonText}>
             ENTRAR
           </Text>
@@ -47,7 +49,10 @@ export function Login() {
         <Text style={styles.registerText1}>
           Não possui uma conta?
         </Text>
-        <TouchableOpacity style={styles.buttonRegister}>
+        <TouchableOpacity 
+          style={styles.buttonRegister}
+          onPress={() => navigation.navigate('Signup')}
+        >
           <Text style={styles.registerText2}>
             Cadastre-se aqui
           </Text>

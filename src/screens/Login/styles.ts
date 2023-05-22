@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
         flex: 2,
         // backgroundColor: 'green',
         alignItems: "center",
+        marginTop: 30
     },
 
     input: {
@@ -52,8 +53,17 @@ export const styles = StyleSheet.create({
     },
 
     subTitle: {
+        // width: 213,
         marginBottom: 28,
-    
+        fontWeight: '600',
+        justifyContent: 'center'
+    },
+
+    subTitleSpan:{
+        // width: 300,
+        // fontSize: 23,
+        fontWeight: '600',
+        color: '#00B6AB'
     },
 
     button: {
