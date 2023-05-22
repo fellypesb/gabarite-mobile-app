@@ -36,14 +36,14 @@ export const styles = StyleSheet.create({
     },
 
     input: {
-        backgroundColor: 'white',
-        borderRadius: 9,
-        borderBottomWidth: 1,
-        // position: 'absolute',
-        width: 320,
-        height: 40,
-        padding: 10,
-        margin: 10
+            backgroundColor: 'white',
+            borderRadius: 9,
+            borderBottomWidth: 1,
+            // position: 'absolute',
+            width: 320,
+            height: 40,
+            padding: 10,
+            margin: 10
     },
 
     title: {
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
 
     subTitle: {
         marginBottom: 28,
-
+    
     },
 
     button: {

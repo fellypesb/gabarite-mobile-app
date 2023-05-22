@@ -53,7 +53,6 @@ export function Login() {
           </Text>
         </TouchableOpacity>
 
-
       </View>
       <StatusBar style="auto" />
       </ImageBackground>
