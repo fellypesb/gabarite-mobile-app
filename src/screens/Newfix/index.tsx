@@ -17,7 +17,7 @@ export function Newfix({ navigation }){
             </View>
 
             <Image 
-                source={require('../../../assets/IconNewFix.png')} 
+                source={require('../../../assets/iconNewFix.png')} 
                 style={styles.cardImage}
             />
 
@@ -26,6 +26,7 @@ export function Newfix({ navigation }){
                     type='primary'
                     content='abrir câmera'
                     width='178'
+                    onPress={() => navigation.navigate('Camera')}
                 />
                 <StyledButton 
                     type='secundary'

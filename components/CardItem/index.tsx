@@ -24,7 +24,7 @@ const CardItem = (props:any) => {
       </Text>
 
       <Image 
-          source={require(`../../assets/${icon}.png`)}
+          source={require(`../../assets/iconHome1.png`)}
           style={styles.cardImage}
       />
     </TouchableOpacity>

@@ -11,17 +11,20 @@ export const styles = StyleSheet.create({
     containerText:{
         flex: 0.8,
         width: 320,
+        marginTop: '10%',
+        paddingTop:'5%',
+        // backgroundColor: 'gray',
     },
 
     text:{
-        width: 270,
-        fontSize: 23,
+        width: 320,
+        fontSize: 28,
         fontWeight: '600',
+        lineHeight: 40,
     },
 
     textSpan:{
-        width: 300,
-        fontSize: 23,
+        fontSize: 28,
         fontWeight: '600',
         color: '#00B6AB'
     },

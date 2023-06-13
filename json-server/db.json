@@ -1,0 +1,138 @@
+{
+  "users": [
+    {
+      "email": "rodrigo.gomes@gmail.com",
+      "password": "$2a$10$UU0ZRV2qn1nElSlhns40q.PNcZj7jVviFu/u/6NE4tKjBPyyUEMCu",
+      "name": "Rodrigo",
+      "last_name": "Gomes",
+      "education_institution": "UNAMA",
+      "id": 10
+    },
+    {
+      "email": "adriel.lima@gmail.com",
+      "password": "$2a$10$eW.yCtjEb5fFckSKJ3jBjO5KxD8o2nZd1FdqWYO3oc2LSZTKez5n2",
+      "name": "Adriel",
+      "last_name": "Lima",
+      "education_institution": "ufopa",
+      "id": 11
+    },
+    {
+      "email": "Test@test.com",
+      "password": "$2a$10$D1xT01ZP8bzgDPQUAH4fxeaYWd9KbG7B4h9OEWtt/En7.sV342.WG",
+      "name": "Test",
+      "last_name": "Test",
+      "education_institution": "Test",
+      "id": 12
+    },
+    {
+      "email": "rodrigO.pereiras@gmail.com",
+      "password": "$2a$10$6D2DXbt1w/Ixvg/9DQ0fM.pE2pPhO7cnw4HrMRmcU/EKLicmNNJCS",
+      "name": "Rodrigo",
+      "last_name": "Gomes",
+      "education_institution": "UNAMA",
+      "id": 13
+    }
+  ],
+  "list": [
+    {
+        "id": "3016dfccdb59287f6f29efc95abb2704",
+        "title": "1ª Avaliação TM202",
+        "description": "Atividade referente a primeira avaliação da turma TM202"
+    },
+
+    {
+        "id": "f7a7a52181545b9870820714c69ca27c",
+        "title": "2ª Avaliação TM202",
+        "description": "Atividade referente a segunda avaliação da turma TM202"
+    },
+
+    {
+        "id": "fe0b89446dc3fb860798ade9933f9496",
+        "title": "3ª Avaliação TM202",
+        "description": "Atividade referente a terceira avaliação da turma TM202"
+    },
+
+    {
+        "id": "fe0b89446dc3fb860798ade9933f9",
+        "title": "4ª Avaliação TM202",
+        "description": "Atividade referente a quarta avaliação da turma TM202"
+    }
+  ],
+  "corrections": [
+    {
+      "id": 1,
+      "idx": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "students": [
+        "Joao",
+        "Maria",
+        "Lucas",
+        "Tiago",
+        "Rennan",
+        "Vitor",
+        "Leonardo",
+        "Ana",
+        "Yuri",
+        "Mateus"
+      ],
+      "error": [
+        2,
+        4,
+        6,
+        3,
+        6,
+        8,
+        4,
+        7,
+        3,
+        2
+      ],
+      "hits": [
+        8,
+        6,
+        4,
+        7,
+        4,
+        2,
+        6,
+        3,
+        7,
+        8
+      ],
+      "accuracy": [
+        80,
+        60,
+        40,
+        70,
+        40,
+        20,
+        60,
+        30,
+        70,
+        80
+      ],
+      "points": [
+        8,
+        6,
+        4,
+        7,
+        4,
+        2,
+        6,
+        3,
+        7,
+        8
+      ]
+    }
+  ]
+}

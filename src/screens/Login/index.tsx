@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 
 import { styles } from './styles';
 
@@ -8,11 +9,46 @@ import {
   View,
   TouchableOpacity,
   ImageBackground,
-  Image 
+  Image,
+  Alert 
 } from 'react-native';
 
 
 export function Login({ navigation }) {
+
+  const [email, setEmail] = useState('')
+  const [pass, setPass] = useState('')
+
+  function login(){
+    
+    fetch('https://72cf-179-124-26-7.sa.ngrok.io/login', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify({
+        email: email,
+        password: pass
+      })
+    })
+    .then((response) => [response.json(), errorCheking(response)])
+    // .then((response) => response.json())
+    .then((json) => console.log(json))
+    
+  };
+
+  function errorCheking(resp){
+    if(resp.ok){
+      setEmail('')
+      setPass('')
+      navigation.navigate('Home')
+    }
+
+    if(resp.status === 400){
+      Alert.alert('Ops! \nEmail ou senha incorretos')
+    }
+  };
+
   return (
     <View style={styles.container}>
       <ImageBackground 
@@ -31,16 +67,20 @@ export function Login({ navigation }) {
       </View>
       <View style={styles.containerForm}>
         <TextInput style={styles.input}
-          placeholder='Usuário'
+          placeholder='Email'
+          value={email}
+          onChangeText={text=>setEmail(text)}
         />
 
         <TextInput style={styles.input}
           secureTextEntry={true}
           placeholder='Senha'
+          value={pass}
+          onChangeText={text=>setPass(text)}
         />
         <TouchableOpacity 
           style={styles.button}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => login()}
         >
           <Text style={styles.buttonText}>
             ENTRAR
