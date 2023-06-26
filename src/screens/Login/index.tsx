@@ -21,7 +21,7 @@ export function Login({ navigation }) {
 
   function login(){
     
-    fetch('https://72cf-179-124-26-7.sa.ngrok.io/login', {
+    fetch('https://c66f-179-124-25-15.sa.ngrok.io/login', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -31,8 +31,7 @@ export function Login({ navigation }) {
         password: pass
       })
     })
-    .then((response) => [response.json(), errorCheking(response)])
-    // .then((response) => response.json())
+    .then((response) => errorCheking(response))
     .then((json) => console.log(json))
     
   };

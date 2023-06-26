@@ -1,0 +1,5 @@
+Flask
+gunicorn
+numpy
+pybase64
+opencv-python

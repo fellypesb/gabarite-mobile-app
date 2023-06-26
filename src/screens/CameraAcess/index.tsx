@@ -4,7 +4,8 @@ import * as MediaLibrary from 'expo-media-library';
 import { 
     View,
     Text,
-    Image 
+    Image,
+    Alert, 
 } from "react-native";
 
 import { styles } from './styles';
@@ -30,7 +31,7 @@ export function CameraAcess({ navigation }){
         if(image) {
             try{
                 await MediaLibrary.createAssetAsync(image);
-                alert('Foto salva na galeria, com sucesso! 🎉');
+                Alert.alert('Foto salva na galeria com sucesso! 🎉');
                 setImage(null);
             } catch(e) {
                 console.log(e)
@@ -71,13 +72,13 @@ export function CameraAcess({ navigation }){
                 {image ?
                 <View style={styles.buttonsContainerImage}>
                     <CameraButton
-                        title={"VOLTAR"}
+                        title={"CONTINUAR"}
                         icon="retweet"
                         onPress={()=>setImage(null)}
                     />
                     <CameraButton
                         title={"SALVAR"}
-                        icon="check"
+                        icon="upload"
                         onPress={saveImage}
                     />
                 </View>

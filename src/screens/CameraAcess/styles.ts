@@ -19,6 +19,12 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingHorizontal: 50
+    },
+
+    buttonsContainerImage2:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 40
     }
 
 });

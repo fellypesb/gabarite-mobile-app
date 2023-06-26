@@ -20,7 +20,7 @@ export function Signup({ navigation }) {
     
 
     function registerTeachers(){
-      fetch('https://72cf-179-124-26-7.sa.ngrok.io/register', {
+      fetch('https://c66f-179-124-25-15.sa.ngrok.io/register', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json; charset=UTF-8',

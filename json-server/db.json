@@ -31,31 +31,52 @@
       "last_name": "Gomes",
       "education_institution": "UNAMA",
       "id": 13
+    },
+    {
+      "email": "rennan.silva@gmail.com",
+      "password": "$2a$10$Z5ZVTx9A91JOl0NTbvPQfOZPKjrCTlKBENg2R3lXd214Iyp3Ja0Hq",
+      "name": "Rennan",
+      "last_name": "Silva",
+      "education_institution": "UFOPA",
+      "id": 14
+    },
+    {
+      "email": "ale.santos@gmail.com",
+      "password": "$2a$10$qhKkzO/Ji51bya0rLddN/..ZrHolT.FBGksqK0BgulHiU9SNK5n2C",
+      "name": "Ale",
+      "last_name": "Santos",
+      "education_institution": "UFOPA",
+      "id": 15
+    },
+    {
+      "email": "test.test@gmail.com",
+      "password": "$2a$10$WF.rA3ieUcbP/4v570zOxeW1M20n06Nd/SxR8UJ8DUoutwUJbw1a6",
+      "name": "Test",
+      "last_name": "Test",
+      "education_institution": "UFOPA",
+      "id": 16
     }
   ],
   "list": [
     {
-        "id": "3016dfccdb59287f6f29efc95abb2704",
-        "title": "1ª Avaliação TM202",
-        "description": "Atividade referente a primeira avaliação da turma TM202"
+      "id": "3016dfccdb59287f6f29efc95abb2704",
+      "title": "1ª Avaliação TM202",
+      "description": "Atividade referente a primeira avaliação da turma TM202"
     },
-
     {
-        "id": "f7a7a52181545b9870820714c69ca27c",
-        "title": "2ª Avaliação TM202",
-        "description": "Atividade referente a segunda avaliação da turma TM202"
+      "id": "f7a7a52181545b9870820714c69ca27c",
+      "title": "2ª Avaliação TM202",
+      "description": "Atividade referente a segunda avaliação da turma TM202"
     },
-
     {
-        "id": "fe0b89446dc3fb860798ade9933f9496",
-        "title": "3ª Avaliação TM202",
-        "description": "Atividade referente a terceira avaliação da turma TM202"
+      "id": "fe0b89446dc3fb860798ade9933f9496",
+      "title": "3ª Avaliação TM202",
+      "description": "Atividade referente a terceira avaliação da turma TM202"
     },
-
     {
-        "id": "fe0b89446dc3fb860798ade9933f9",
-        "title": "4ª Avaliação TM202",
-        "description": "Atividade referente a quarta avaliação da turma TM202"
+      "id": "fe0b89446dc3fb860798ade9933f9",
+      "title": "4ª Avaliação TM202",
+      "description": "Atividade referente a quarta avaliação da turma TM202"
     }
   ],
   "corrections": [
