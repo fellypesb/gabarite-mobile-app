@@ -5,7 +5,7 @@ import utils
 from flask import Flask, request, jsonify
 
 def run(b64, widthImg=400, heightImg=600, questions=10, choices=5, ans=[1,1,3,1,0,2,1,2,1,4]):
-    decoded_data = base64.b64decode(uri)
+    decoded_data = base64.b64decode(b64)
     np_data = np.fromstring(decoded_data, np.uint8)
     img = cv2.imdecode(np_data, cv2.IMREAD_UNCHANGED)
 
@@ -94,58 +94,18 @@ def run(b64, widthImg=400, heightImg=600, questions=10, choices=5, ans=[1,1,3,1,
         score = (sum(grading)) # FINAL GRADE
     return [score, grading]
 
-    # print('Score:', score)
-
-    # DISPLAY ANSWERS
-
-    # print(imgWarpColored.shape)
-    # imgResult = imgWarpColored.copy()
-    # imgResult = utils.showAnswers(imgResult, myIndex, grading, ans, questions, choices)
-    # imgRawDrawing = np.zeros_like(imgWarpColored)
-    # imgRawDrawing = utils.showAnswers(imgRawDrawing, myIndex, grading, ans, questions, choices)
-    # invMatrix = cv2.getPerspectiveTransform(pt2, pt1)
-    # imgInvWarp = cv2.warpPerspective(imgRawDrawing, invMatrix, (widthImg, heightImg))
-    #
-    # imgRawGrade = np.zeros_like(imgGradeDisplay)
-    # cv2.putText(imgRawGrade,str(score), (100, 100), cv2.FONT_HERSHEY_COMPLEX, 3, (0, 255,255),3)
-    # # cv2.imshow("Grade", imgRawGrade)
-    # invMatrixG = cv2.getPerspectiveTransform(ptG2, ptG1)
-    # imgInvGradeDisplay = cv2.warpPerspective(imgRawGrade, invMatrixG, (widthImg, heightImg))
-    #
-    # imgFinal = cv2.addWeighted(imgFinal,1,imgInvWarp,1,0)
-    # imgFinal = cv2.addWeighted(imgFinal, 1, imgInvGradeDisplay, 1, 0)
-
-
-
-# print(len(biggestContour))
-
-# imgBlank = np.zeros_like(img)
-# imageArray = ([img, imgGray, imgBlur, imgCanny],
-#               [imgContours,imgBiggestContours,imgWarpColored,imgThresh],
-#               [imgResult,imgRawDrawing,imgInvWarp,imgFinal])
-#
-# lables = [['Original', 'Gray', 'Blur', 'Canny'],
-#           ['Contours', 'Biggest Con', 'Warp', 'Threshold'],
-#           ['Result', 'Raw Drawing', 'Inv Warp', 'Final']]
-#
-# imgStacked = utils.stackImages(imageArray, 0.35, lables)
-#
-# cv2.imshow('Final Result', imgFinal)
-#
-# cv2.imshow('Horizontal Images', imgStacked)
-# cv2.waitKey(0)
-
 app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        file = request.files.get('file')
-        if file is None or file.filename == '':
+
+        file = request.form.get('file')
+        if file is None:
             return jsonify({'error': 'no file'})
 
         try:
-            image_base64 = file.read()
-            score, grading = run(b64=img_base64)
+            # img_b64 = file.read()
+            score, grading = run(b64=file)
             data = {'score': int(score), 'grading':grading}
             return jsonify(data)
         except Exception as e:

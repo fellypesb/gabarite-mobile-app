@@ -15,9 +15,11 @@ import CameraButton from "../../../components/CameraButton";
 export function CameraAcess({ navigation }){
     const [hasCameraPermission, setHasCameraPermission] = useState(Boolean);
     const [image, setImage] = useState(null);
+    const [imgBase64, setBase64] = useState();
     const [type, setType] = useState(CameraType.back);
-    const [flash, setFlash] = useState(FlashMode.off)
+    const [flash, setFlash] = useState(FlashMode.off);
     const cameraRef = useRef();
+    const formData = new FormData()
 
     useEffect(() => {
         (async () => {
@@ -42,14 +44,30 @@ export function CameraAcess({ navigation }){
     const takePicture = async () => {
         if(cameraRef) {
             try{
-                const data = await cameraRef.current.takePictureAsync();
-                console.log(data);
+                const data = await cameraRef.current.takePictureAsync({'base64':true});
                 setImage(data.uri)
+                setBase64(data.base64)
+                formData.append('file', imgBase64)
+                imgProcessing(formData)
             } catch(e){
                 console.log(e);
             }
         }
     }
+
+    function imgProcessing(formData:any){
+    
+        fetch('https://e609-179-124-25-15.sa.ngrok.io', {
+          method: 'POST',
+          body: formData
+        })
+        .then(resp => resp.json())
+        .then(resp => { console.log(resp)
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    };
 
     if (hasCameraPermission === false){
         return <Text>No acess to camera</Text>

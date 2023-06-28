@@ -7,8 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "server": "json-server -H 127.0.0.1 ./json-server/db.json -W -p 4231 -m ./node_modules/json-server-auth",
-    "server-past": "json-server -H  127.0.0.1 ./json-server/db.json -W -p 4231 -m ./node_modules/json-server-auth"
+    "server": "json-server -H 127.0.0.1 ./json-server/db.json -W -p 4231 -m ./node_modules/json-server-auth"
   },
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
