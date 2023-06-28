@@ -99,13 +99,13 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
 
-        file = request.form.get('file')
-        if file is None:
+        file = request.files.get('file')
+        if file is None or file.filename == '':
             return jsonify({'error': 'no file'})
 
         try:
-            # img_b64 = file.read()
-            score, grading = run(b64=file)
+            img_b64 = file.read()
+            score, grading = run(b64=img_b64)
             data = {'score': int(score), 'grading':grading}
             return jsonify(data)
         except Exception as e:
