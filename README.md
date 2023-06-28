@@ -64,3 +64,11 @@ ou
 npm run android
 ```
 para executar no emulador.
+## Entrega Final
+Para última entrega preparei uma API própria que será responsável pela correção dos cartões respostas por meio de processamento de imagem. Nos links a seguir é possível acompanhar alguns testes que podem ser realizados.
+
+### Teste com a API de processamento de imagem
+Link 1: [https://youtu.be/OVXy0gAVW0A](https://youtu.be/OVXy0gAVW0A)
+
+### Teste de comunicação entre a aplicação mobile e a API 
+Link 2: [https://youtu.be/dHuTycmtfuI](https://youtu.be/dHuTycmtfuI)
